@@ -1,0 +1,12 @@
+# Specific files
+
+
+# Specific directories
+
+code/TestResults
+
+
+# Path patterns
+
+**/bin
+**/obj
