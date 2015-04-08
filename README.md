@@ -1,2 +1,22 @@
 # AbstractDataTypeLibrary
-Library that contains several abstract data types along with their unit tests. In addition to that, some sorting algorithms are implemented. This project was born as a Kata exercise in .NET
+Library that contains several abstract data types along with their unit tests:
+
+* ArrayList
+* LinkedList
+* Set
+* B-Tree
+* Queue
+* Stack
+* ...
+
+In addition to that, some sorting algorithms are implemented:
+
+* Bubble sort
+* Merge sort
+* Selection sort
+* Insert sort
+* Quick sort
+ 
+
+This project was born as a Kata exercise in .NET, to test TDD and some basic algorithm.
+
