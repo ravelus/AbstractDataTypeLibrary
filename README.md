@@ -1,5 +1,5 @@
 # AbstractDataTypeLibrary
-Library that contains several abstract data types along with their unit tests:
+Library that contains several abstract data types implemented in C#, along with their unit tests:
 
 * ArrayList
 * LinkedList
