@@ -2,9 +2,9 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using TAD_Library;
+using AbstractDataTypeLibrary;
 
-namespace TAD_Test
+namespace AbstractDataTypeLibraryTest
 {
     [TestClass]
     public class ArrayListTest

@@ -2,9 +2,9 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using TAD_Library.Sorting;
+using AbstractDataTypeLibrary.Sorting;
 
-namespace TAD_Test.SortingTests
+namespace AbstractDataTypeLibraryTest.SortingTests
 {
     [TestClass]
     public class BubbleSorterTest
