@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAD_Library", "TAD_Library.csproj", "{462B0A41-27FF-47A0-B5CA-E908DCC0BE3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractDataTypeLibrary", "AbstractDataTypeLibrary.csproj", "{462B0A41-27FF-47A0-B5CA-E908DCC0BE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAD_Test", "..\TAD_Test\TAD_Test.csproj", "{1D787F7C-9CD8-400D-9480-CE50A8C88237}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractDataTypeLibraryTest", "..\TAD_Test\AbstractDataTypeLibraryTest.csproj", "{1D787F7C-9CD8-400D-9480-CE50A8C88237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
