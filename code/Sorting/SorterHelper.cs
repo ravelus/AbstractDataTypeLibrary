@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TAD_Library.Sorting
+namespace AbstractDataTypeLibrary.Sorting
 {
     internal static class SorterHelper<T> where T : IComparable<T>
     {

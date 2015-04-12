@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TAD_Library.Sorting
+namespace AbstractDataTypeLibrary.Sorting
 {
     public class SelectionSorter<T> : ISorter<T> where T : IComparable<T>
     {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace TAD_Library
+namespace AbstractDataTypeLibrary
 {
     public class BTree<T> : IEnumerable<T> where T : IComparable<T>
     {

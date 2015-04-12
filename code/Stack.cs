@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TAD_Library
+namespace AbstractDataTypeLibrary
 {
     public class Stack<T>
     {
