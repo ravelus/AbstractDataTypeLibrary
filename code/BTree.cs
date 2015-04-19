@@ -9,6 +9,11 @@ namespace AbstractDataTypeLibrary
         private BinaryTreeNode<T> _head;
         private int _count;
 
+        public BinaryTreeNode<T> Head
+        {
+            get { return _head; }
+        }
+
         public void Clear()
         {
             _head = null;
@@ -25,14 +30,7 @@ namespace AbstractDataTypeLibrary
 
         public void Add(T value)
         {
-            if (_head == null)
-            {
-                _head = new BinaryTreeNode<T>(value);
-            }
-            else
-            {
-                AddTo(_head, value);
-            }
+            AddExecutor(ref _head, value);
             _count++;
         }
 
@@ -225,35 +223,35 @@ namespace AbstractDataTypeLibrary
             return GetEnumerator();
         }
 
-        private void AddTo(BinaryTreeNode<T> node, T value)
+        private void AddExecutor(ref BinaryTreeNode<T> node, T value)
+        {
+            // if there is no left child make this the new left
+            if (node == null)
+            {
+                node = new BinaryTreeNode<T>(value);
+            }
+            else
+            {
+                // else add it to the left node
+                AddBalancing(node, value);
+            }
+        }
+
+        private void AddBalancing(BinaryTreeNode<T> node, T value)
         {
             // Case 1: Value is less than the current node value
             if (value.CompareTo(node.Value) < 0)
             {
-                // if there is no left child make this the new left
-                if (node.Left == null)
-                {
-                    node.Left = new BinaryTreeNode<T>(value);
-                }
-                else
-                {
-                    // else add it to the left node
-                    AddTo(node.Left, value);
-                }
+                BinaryTreeNode<T> left = node.Left;
+                AddExecutor(ref left, value);
+                node.Left = left;
             }
             // Case 2: Value is equal to or greater than the current value
             else
             {
-                // If there is no right, add it to the right
-                if (node.Right == null)
-                {
-                    node.Right = new BinaryTreeNode<T>(value);
-                }
-                else
-                {
-                    // else add it to the right node
-                    AddTo(node.Right, value);
-                }
+                BinaryTreeNode<T> right = node.Right;
+                AddExecutor(ref right, value);
+                node.Right = right;
             }
         }
 
@@ -325,7 +323,7 @@ namespace AbstractDataTypeLibrary
         }
     }
 
-    class BinaryTreeNode<TNode> : IComparable<TNode> where TNode : IComparable<TNode>
+    public class BinaryTreeNode<TNode> : IComparable<TNode> where TNode : IComparable<TNode>
     {
         public BinaryTreeNode(TNode value)
         {
@@ -343,5 +341,4 @@ namespace AbstractDataTypeLibrary
             return Value.CompareTo(other);
         }
     }
-
 }
