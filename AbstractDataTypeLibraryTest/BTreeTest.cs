@@ -115,7 +115,8 @@ namespace AbstractDataTypeLibraryTest
             treeTest.Add(7);
             treeTest.Add(9);
 
-            treeTest.Remove(1);
+            bool result = treeTest.Remove(1);
+            Assert.IsTrue(result);
             Assert.AreEqual(5, treeTest.Head.Value);
             Assert.AreEqual(3, treeTest.Head.Left.Value);
             Assert.AreEqual(4, treeTest.Head.Left.Right.Value);
@@ -124,7 +125,8 @@ namespace AbstractDataTypeLibraryTest
             Assert.AreEqual(7, treeTest.Head.Right.Left.Value);
             Assert.AreEqual(9, treeTest.Head.Right.Right.Value);
 
-            treeTest.Remove(8);
+            result = treeTest.Remove(8);
+            Assert.IsTrue(result);
             Assert.AreEqual(5, treeTest.Head.Value);
             Assert.AreEqual(3, treeTest.Head.Left.Value);
             Assert.AreEqual(4, treeTest.Head.Left.Right.Value);
@@ -133,7 +135,8 @@ namespace AbstractDataTypeLibraryTest
             Assert.AreEqual(7, treeTest.Head.Right.Left.Value);
             Assert.AreEqual(null, treeTest.Head.Right.Right);
 
-            treeTest.Remove(5);
+            result = treeTest.Remove(5);
+            Assert.IsTrue(result);
             Assert.AreEqual(7, treeTest.Head.Value);
             Assert.AreEqual(3, treeTest.Head.Left.Value);
             Assert.AreEqual(4, treeTest.Head.Left.Right.Value);
@@ -142,7 +145,8 @@ namespace AbstractDataTypeLibraryTest
             Assert.AreEqual(null, treeTest.Head.Right.Left);
             Assert.AreEqual(null, treeTest.Head.Right.Right);
 
-            treeTest.Remove(3);
+            result = treeTest.Remove(3);
+            Assert.IsTrue(result);
             Assert.AreEqual(7, treeTest.Head.Value);
             Assert.AreEqual(4, treeTest.Head.Left.Value);
             Assert.AreEqual(null, treeTest.Head.Left.Right);
@@ -150,6 +154,9 @@ namespace AbstractDataTypeLibraryTest
             Assert.AreEqual(9, treeTest.Head.Right.Value);
             Assert.AreEqual(null, treeTest.Head.Right.Left);
             Assert.AreEqual(null, treeTest.Head.Right.Right);
+
+            result = treeTest.Remove(1);
+            Assert.IsFalse(result);
         }
     }
 }
